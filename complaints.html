@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaint Management</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        <i class="fa-solid fa-building"></i>
+        Shiv Apartment
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="residents.html">Residents</a>
+        <a href="complaints.html">Complaints</a>
+        <a href="maintenance.html">Maintenance</a>
+        <a href="notice.html">Notice</a>
+        <a href="dashboard.html">Dashboard</a>
+    </nav>
+
+</header>
+
+<section class="page-title">
+
+    <h1>Complaint Management</h1>
+
+    <p>Register and Manage Complaints</p>
+
+</section>
+
+<section class="resident-form">
+
+    <h2>Add Complaint</h2>
+
+    <form id="complaintForm">
+
+        <input
+        type="text"
+        id="complaintName"
+        placeholder="Resident Name"
+        required>
+
+        <input
+        type="text"
+        id="flatNo"
+        placeholder="Flat Number"
+        required>
+
+        <input
+        type="text"
+        id="subject"
+        placeholder="Complaint Subject"
+        required>
+<select id="status">
+
+    <option value="Pending">🟡 Pending</option>
+
+    <option value="In Progress">🔵 In Progress</option>
+
+    <option value="Resolved">🟢 Resolved</option>
+
+</select>
+
+        <button type="submit">
+            <i class="fa-solid fa-plus"></i>
+            Add Complaint
+        </button>
+
+    </form>
+
+</section>
+
+<section class="resident-list">
+
+    <h2>Complaint List</h2>
+
+    <p id="complaintCount">
+        <strong>Total Complaints :</strong> 0
+    </p>
+
+    <input
+    type="text"
+    id="searchComplaint"
+    class="search-box"
+    placeholder="🔍 Search Complaint...">
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>ID</th>
+
+                <th>Name</th>
+
+                <th>Flat</th>
+
+                <th>Subject</th>
+
+                <th>Status</th>
+
+                <th>Action</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody id="complaintTable">
+
+        </tbody>
+
+    </table>
+
+</section>
+
+<script src="js/complaints.js"></script>
+
+</body>
+</html>

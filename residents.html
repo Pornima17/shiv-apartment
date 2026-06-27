@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Residents</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+
+<header>
+
+<div class="logo">
+<i class="fa-solid fa-building"></i>
+Shiv Apartment
+</div>
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="residents.html">Residents</a>
+<a href="complaints.html">Complaints</a>
+<a href="maintenance.html">Maintenance</a>
+<a href="notice.html">Notice</a>
+<a href="dashboard.html">Dashboard</a>
+
+</nav>
+
+</header>
+
+<section class="page-title">
+
+<h1>Residents Management</h1>
+
+<p>Add and Manage Residents</p>
+
+</section>
+
+<section class="resident-form">
+
+<h2>Add Resident</h2>
+
+<form id="residentForm">
+
+<input type="text" id="name" placeholder="Resident Name" required>
+
+<input type="text" id="flat" placeholder="Flat Number" required>
+
+<input type="text" id="mobile" placeholder="Mobile Number" required>
+
+<input type="email" id="email" placeholder="Email" required>
+
+<button type="submit">Add Resident</button>
+
+</form>
+
+</section>
+
+<section class="resident-list">
+
+<h2>Residents List</h2>
+
+<p id="residentCount"><strong>Total Residents :</strong> 0</p>
+
+<input type="text"
+id="search"
+placeholder="Search Resident...">
+
+<table>
+
+<thead>
+
+<tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Flat</th>
+    <th>Mobile</th>
+    <th>Email</th>
+    <th>Action</th>
+</tr>
+
+</thead>
+
+<tbody id="residentTable">
+
+</tbody>
+
+</table>
+
+</section>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

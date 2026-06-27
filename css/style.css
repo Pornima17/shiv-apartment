@@ -1,0 +1,845 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+background:#f4f7fc;
+}
+
+/* Navbar */
+
+header{
+background:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo{
+font-size:30px;
+font-weight:bold;
+color:#0f4c81;
+}
+
+nav a{
+text-decoration:none;
+margin-left:25px;
+color:#333;
+font-weight:600;
+}
+
+nav a:hover{
+color:#0f4c81;
+}
+
+/* Hero */
+
+.hero{
+height:85vh;
+background:url('../images/apartment.jpg');
+background-size:cover;
+background-position:center;
+position:relative;
+}
+
+.overlay{
+background:rgba(0,52,110,.65);
+height:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.hero-content{
+color:white;
+}
+
+.hero-content h1{
+font-size:70px;
+}
+
+.hero-content p{
+font-size:24px;
+margin-top:20px;
+}
+
+.buttons{
+margin-top:30px;
+}
+
+.btn1,
+.btn2{
+
+padding:15px 35px;
+border:none;
+border-radius:30px;
+font-size:18px;
+cursor:pointer;
+margin:10px;
+}
+
+.btn1{
+background:white;
+color:#0f4c81;
+}
+
+.btn2{
+background:#0f4c81;
+color:white;
+}
+
+/* Cards */
+
+.stats{
+padding:50px;
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:20px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.card i{
+font-size:40px;
+color:#0f4c81;
+margin-bottom:15px;
+}
+
+.card h2{
+margin-bottom:10px;
+}
+
+/* Quick Actions */
+
+.actions{
+padding:50px;
+}
+
+.actions h2{
+margin-bottom:30px;
+}
+
+.action-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+}
+
+.action-box{
+background:white;
+padding:30px;
+border-radius:15px;
+text-align:center;
+font-weight:bold;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+cursor:pointer;
+transition:.3s;
+}
+
+.action-box:hover{
+transform:translateY(-5px);
+}
+
+/* Footer */
+
+footer{
+background:#0f4c81;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+.page-title{
+    background:#0f4c81;
+    color:white;
+    text-align:center;
+    padding:40px;
+}
+
+.resident-form{
+    width:80%;
+    margin:40px auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.resident-form form{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.resident-form input{
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+.resident-form button{
+    grid-column:span 2;
+    background:#0f4c81;
+    color:white;
+    padding:12px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.resident-list{
+    width:80%;
+    margin:40px auto;
+}
+
+.resident-list input{
+    width:100%;
+    padding:12px;
+    margin-bottom:20px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+}
+
+th,td{
+    border:1px solid #ddd;
+    padding:12px;
+    text-align:center;
+}
+
+th{
+    background:#0f4c81;
+    color:white;
+}
+
+tr:nth-child(even){
+    background:#f2f2f2;
+}
+
+table button{
+    padding:8px 15px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    margin:2px;
+}
+
+table button:first-child{
+    background:#ffc107;
+    color:black;
+}
+
+table button:last-child{
+    background:#dc3545;
+    color:white;
+}
+
+table button:hover{
+    opacity:0.9;
+}
+
+/* Dashboard */
+
+.dashboard-cards{
+    width:90%;
+    margin:40px auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+.dashboard-card{
+    background:#fff;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.dashboard-card:hover{
+    transform:translateY(-8px);
+}
+
+.dashboard-card i{
+    font-size:45px;
+    color:#0f4c81;
+    margin-bottom:15px;
+}
+
+.dashboard-card h2{
+    font-size:40px;
+    color:#0f4c81;
+}
+
+.dashboard-card p{
+    margin-top:10px;
+    font-size:18px;
+    color:#555;
+}
+
+/* ===========================
+   Complaint / Resident Form
+=========================== */
+
+.resident-form{
+    width:80%;
+    margin:40px auto;
+    background:#fff;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.resident-form h2{
+    margin-bottom:20px;
+    color:#0f4c81;
+}
+
+.resident-form form{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.resident-form input,
+.resident-form select{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:6px;
+    font-size:16px;
+    outline:none;
+    transition:0.3s;
+}
+
+.resident-form input:focus,
+.resident-form select:focus{
+    border-color:#0f4c81;
+    box-shadow:0 0 5px rgba(15,76,129,.3);
+}
+
+.resident-form button{
+    grid-column:span 2;
+    padding:12px;
+    background:#0f4c81;
+    color:white;
+    border:none;
+    border-radius:6px;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.resident-form button:hover{
+    background:#08365b;
+}
+
+/* ===========================
+   Complaint List
+=========================== */
+
+.resident-list{
+    width:80%;
+    margin:40px auto;
+}
+
+.resident-list h2{
+    color:#0f4c81;
+    margin-bottom:10px;
+}
+
+#complaintCount{
+    margin:15px 0;
+    font-size:18px;
+    color:#333;
+}
+
+/* Search Box */
+
+.search-box,
+#searchComplaint{
+    width:100%;
+    padding:12px 15px;
+    margin-bottom:20px;
+    border:1px solid #ccc;
+    border-radius:6px;
+    font-size:16px;
+    outline:none;
+    transition:0.3s;
+}
+
+.search-box:focus,
+#searchComplaint:focus{
+    border-color:#0f4c81;
+    box-shadow:0 0 5px rgba(15,76,129,.3);
+}
+
+/* ===========================
+   Table
+=========================== */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:#fff;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    border-radius:10px;
+    overflow:hidden;
+}
+
+th{
+    background:#0f4c81;
+    color:white;
+    padding:15px;
+}
+
+td{
+    padding:12px;
+    border-bottom:1px solid #eee;
+}
+
+tr:nth-child(even){
+    background:#f8f9fa;
+}
+
+tr:hover{
+    background:#eef5ff;
+}
+
+/* ===========================
+   Delete Button
+=========================== */
+
+.delete-btn{
+    background:#dc3545;
+    color:white;
+    border:none;
+    padding:8px 14px;
+    border-radius:6px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.delete-btn:hover{
+    background:#b02a37;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:768px){
+
+    header{
+        flex-direction:column;
+        gap:15px;
+        padding:20px;
+    }
+
+    nav{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:10px;
+    }
+
+    .resident-form,
+    .resident-list{
+        width:95%;
+    }
+
+    .resident-form form{
+        grid-template-columns:1fr;
+    }
+
+    .resident-form button{
+        grid-column:span 1;
+    }
+
+    .stats,
+    .dashboard-cards,
+    .action-grid{
+        grid-template-columns:1fr;
+    }
+
+    table{
+        display:block;
+        overflow-x:auto;
+        white-space:nowrap;
+    }
+
+    .hero-content h1{
+        font-size:40px;
+    }
+
+    .hero-content p{
+        font-size:18px;
+    }
+
+}
+
+
+/* ===========================
+   Resident / Complaint Form
+=========================== */
+
+.resident-form{
+    width:80%;
+    margin:40px auto;
+    background:#fff;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.resident-form h2{
+    margin-bottom:20px;
+    color:#0f4c81;
+}
+
+.resident-form form{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.resident-form input,
+.resident-form select{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:6px;
+    font-size:16px;
+    outline:none;
+    transition:.3s;
+}
+
+.resident-form input:focus,
+.resident-form select:focus{
+    border-color:#0f4c81;
+    box-shadow:0 0 5px rgba(15,76,129,.3);
+}
+
+.resident-form button{
+    grid-column:span 2;
+    padding:12px;
+    background:#0f4c81;
+    color:#fff;
+    border:none;
+    border-radius:6px;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.resident-form button:hover{
+    background:#08365b;
+}
+
+/* ===========================
+   Resident / Complaint List
+=========================== */
+
+.resident-list{
+    width:80%;
+    margin:40px auto;
+}
+
+.resident-list h2{
+    color:#0f4c81;
+    margin-bottom:10px;
+}
+
+#residentCount,
+#complaintCount{
+    margin:15px 0;
+    font-size:18px;
+    font-weight:bold;
+    color:#333;
+}
+
+/* ===========================
+   Search Box
+=========================== */
+
+#search,
+#searchComplaint{
+    width:100%;
+    padding:12px 15px;
+    margin-bottom:20px;
+    border:1px solid #ccc;
+    border-radius:6px;
+    font-size:16px;
+    outline:none;
+    transition:.3s;
+}
+
+#search:focus,
+#searchComplaint:focus{
+    border-color:#0f4c81;
+    box-shadow:0 0 5px rgba(15,76,129,.3);
+}
+
+/* ===========================
+   Table
+=========================== */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:#fff;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+th{
+    background:#0f4c81;
+    color:#fff;
+    padding:15px;
+    text-align:center;
+}
+
+td{
+    padding:12px;
+    text-align:center;
+    border-bottom:1px solid #eee;
+}
+
+tr:nth-child(even){
+    background:#f8f9fa;
+}
+
+tr:hover{
+    background:#eef5ff;
+}
+
+/* ===========================
+   Buttons
+=========================== */
+
+table button{
+    padding:8px 14px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.delete-btn{
+    background:#dc3545;
+    color:#fff;
+}
+
+.delete-btn:hover{
+    background:#b02a37;
+}
+
+
+/* ===========================
+   Dashboard
+=========================== */
+
+.dashboard-cards{
+    width:90%;
+    margin:40px auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+.dashboard-card{
+    background:#fff;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.dashboard-card:hover{
+    transform:translateY(-8px);
+}
+
+.dashboard-card i{
+    font-size:45px;
+    color:#0f4c81;
+    margin-bottom:15px;
+}
+
+.dashboard-card h2{
+    font-size:40px;
+    color:#0f4c81;
+    margin-bottom:10px;
+}
+
+.dashboard-card p{
+    font-size:18px;
+    color:#555;
+}
+
+/* ===========================
+   Responsive Design
+=========================== */
+
+@media (max-width:992px){
+
+    .stats{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .action-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .dashboard-cards{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .resident-form,
+    .resident-list{
+        width:90%;
+    }
+}
+
+@media (max-width:768px){
+
+    header{
+        flex-direction:column;
+        align-items:center;
+        padding:20px;
+    }
+
+    .logo{
+        margin-bottom:15px;
+    }
+
+    nav{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:12px;
+    }
+
+    nav a{
+        margin:0;
+    }
+
+    .hero{
+        height:70vh;
+    }
+
+    .hero-content h1{
+        font-size:42px;
+    }
+
+    .hero-content p{
+        font-size:18px;
+    }
+
+    .resident-form form{
+        grid-template-columns:1fr;
+    }
+
+    .resident-form button{
+        grid-column:span 1;
+    }
+
+    .stats,
+    .action-grid,
+    .dashboard-cards{
+        grid-template-columns:1fr;
+    }
+
+    table{
+        display:block;
+        overflow-x:auto;
+        white-space:nowrap;
+    }
+}
+
+@media (max-width:480px){
+
+    .hero-content h1{
+        font-size:32px;
+    }
+
+    .hero-content p{
+        font-size:16px;
+    }
+
+    .btn1,
+    .btn2{
+        width:100%;
+        margin:8px 0;
+    }
+
+    .page-title{
+        padding:25px;
+    }
+
+    .page-title h1{
+        font-size:28px;
+    }
+
+    .resident-form,
+    .resident-list{
+        width:95%;
+        padding:20px;
+    }
+
+    .dashboard-card{
+        padding:20px;
+    }
+
+    .dashboard-card h2{
+        font-size:32px;
+    }
+
+    table th,
+    table td{
+        padding:10px;
+    }
+}
+
+/* Complaint Status */
+
+.Pending{
+    background:#ffe082;
+    color:#000;
+    font-weight:bold;
+    border-radius:5px;
+}
+
+.InProgress{
+    background:#64b5f6;
+    color:white;
+    font-weight:bold;
+    border-radius:5px;
+}
+
+.Resolved{
+    background:#81c784;
+    color:white;
+    font-weight:bold;
+    border-radius:5px;
+}
+
+

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+    <i class="fa-solid fa-building"></i>
+    Shiv Apartment
+</div>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="residents.html">Residents</a>
+    <a href="complaints.html">Complaints</a>
+    <a href="maintenance.html">Maintenance</a>
+    <a href="notice.html">Notice</a>
+    <a href="dashboard.html">Dashboard</a>
+</nav>
+
+</header>
+
+<!-- PAGE TITLE -->
+<section class="page-title">
+    <h1>Dashboard</h1>
+    <p>Society Management Overview</p>
+</section>
+
+<!-- MAIN STATS CARDS -->
+<section class="dashboard-cards">
+
+    <div class="dashboard-card">
+        <i class="fa-solid fa-users"></i>
+        <h2 id="totalResidents">0</h2>
+        <p>Total Residents</p>
+    </div>
+
+    <div class="dashboard-card">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        <h2 id="totalComplaints">0</h2>
+        <p>Complaints</p>
+    </div>
+
+    <div class="dashboard-card">
+        <i class="fa-solid fa-screwdriver-wrench"></i>
+        <h2 id="totalMaintenance">0</h2>
+        <p>Maintenance</p>
+    </div>
+
+    <div class="dashboard-card">
+        <i class="fa-solid fa-file-lines"></i>
+        <h2 id="totalNotices">0</h2>
+        <p>Notices</p>
+    </div>
+
+</section>
+
+<!-- 💰 FINANCIAL DASHBOARD -->
+<section class="dashboard" style="display:flex;gap:20px;justify-content:center;margin-top:20px;flex-wrap:wrap;">
+
+    <div class="card" style="background:white;padding:20px;border-radius:12px;width:200px;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,0.1);">
+        <h3>Total Collection</h3>
+        <p id="totalCollection">₹0</p>
+    </div>
+
+    <div class="card" style="background:white;padding:20px;border-radius:12px;width:200px;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,0.1);">
+        <h3>Pending Payments</h3>
+        <p id="pendingPayments">0</p>
+    </div>
+
+</section>
+
+<!-- 📊 CHART SECTION -->
+<section class="chart-section" style="display:flex;justify-content:center;margin:30px;">
+
+    <div style="width:420px;background:white;padding:20px;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,0.1);">
+
+        <h3 style="text-align:center;margin-bottom:10px;">Maintenance Overview</h3>
+
+        <canvas id="maintenanceChart"></canvas>
+
+    </div>
+
+</section>
+
+<!-- JS FILE -->
+<script src="js/dashboard.js"></script>
+
+</body>
+</html>
