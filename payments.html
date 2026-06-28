@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payments</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<header>
+
+<div class="logo">
+<i class="fa-solid fa-building"></i>
+Shiv Apartment
+</div>
+
+<nav>
+
+<a href="dashboard.html">Dashboard</a>
+<a href="residents.html">Residents</a>
+<a href="maintenance.html">Maintenance</a>
+<a href="payments.html">Payments</a>
+<a href="complaints.html">Complaints</a>
+<a href="notice.html">Notice</a>
+<a href="documents.html">Documents</a>
+
+</nav>
+
+</header>
+
+<section class="page-title">
+
+<h1>Payments Management</h1>
+
+<p>Add and Manage Maintenance Payments</p>
+
+</section>
+
+<section class="payment-form">
+
+<h2>Add Payment</h2>
+
+<form id="paymentForm">
+
+<select id="resident" required>
+
+<option value="">Select Resident</option>
+
+</select>
+
+<input
+type="text"
+id="flat"
+placeholder="Flat Number"
+readonly>
+
+<select id="month" required>
+
+<option value="">Select Month</option>
+
+<option>January</option>
+<option>February</option>
+<option>March</option>
+<option>April</option>
+<option>May</option>
+<option>June</option>
+<option>July</option>
+<option>August</option>
+<option>September</option>
+<option>October</option>
+<option>November</option>
+<option>December</option>
+
+</select>
+
+<input
+type="number"
+id="year"
+placeholder="Year"
+required>
+
+<input
+type="number"
+id="amount"
+placeholder="Amount"
+required>
+
+<input
+type="date"
+id="date"
+required>
+
+<select id="mode" required>
+
+<option value="">Payment Mode</option>
+
+<option>Cash</option>
+
+<option>UPI</option>
+
+<option>Bank Transfer</option>
+
+</select>
+
+<select id="status" required>
+
+<option value="">Status</option>
+
+<option>Paid</option>
+
+<option>Pending</option>
+
+</select>
+
+<button type="submit">
+
+Add Payment
+
+</button>
+
+</form>
+
+</section>
+
+<section class="payment-list">
+
+<h2>Payments List</h2>
+
+<p id="totalCollection">
+
+<strong>Total Collection :</strong>
+
+₹0
+
+</p>
+
+<input
+type="text"
+id="search"
+placeholder="Search Payment...">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+
+<th>Resident</th>
+
+<th>Flat</th>
+
+<th>Month</th>
+
+<th>Year</th>
+
+<th>Amount</th>
+
+<th>Status</th>
+
+<th>Mode</th>
+
+<th>Date</th>
+
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody id="paymentTable">
+
+</tbody>
+
+</table>
+
+</section>
+
+<script src="js/payments.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Documents</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<i class="fa-solid fa-building"></i>
+Shiv Apartment
+</div>
+
+<nav>
+
+<a href="dashboard.html">Dashboard</a>
+<a href="residents.html">Residents</a>
+<a href="maintenance.html">Maintenance</a>
+<a href="payments.html">Payments</a>
+<a href="complaints.html">Complaints</a>
+<a href="notice.html">Notice</a>
+<a href="documents.html">Documents</a>
+
+</nav>
+
+</header>
+
+<section class="page-title">
+
+<h1>Documents Management</h1>
+
+<p>Upload and Manage Society Documents</p>
+
+</section>
+
+<section class="document-form">
+
+<h2>Upload Document</h2>
+
+<form id="documentForm">
+
+<input
+type="text"
+id="title"
+placeholder="Document Title"
+required>
+
+<select id="type" required>
+
+<option value="">Select Type</option>
+
+<option>Meeting Minutes</option>
+
+<option>Rules & Regulations</option>
+
+<option>Maintenance Notice</option>
+
+<option>General Notice</option>
+
+<option>Other</option>
+
+</select>
+
+<select id="file" required>
+
+<option value="">Select PDF</option>
+
+<option value="documents/meeting-minutes.pdf">
+Meeting Minutes
+</option>
+
+<option value="documents/society-rules.pdf">
+Society Rules
+</option>
+
+<option value="documents/maintenance-notice.pdf">
+Maintenance Notice
+</option>
+
+<option value="documents/agm-notice.pdf">
+AGM Notice
+</option>
+
+</select>
+
+<button type="submit">
+
+Upload Document
+
+</button>
+
+</form>
+
+</section>
+
+<section class="document-list">
+
+<h2>Documents List</h2>
+
+<p id="documentCount">
+
+<strong>Total Documents :</strong> 0
+
+</p>
+
+<input
+type="text"
+id="search"
+placeholder="Search Document">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+<th>Title</th>
+<th>Type</th>
+<th>File Name</th>
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody id="documentTable">
+
+</tbody>
+
+</table>
+
+</section>
+
+<script src="js/documents.js"></script>
+
+</body>
+</html>

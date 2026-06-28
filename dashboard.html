@@ -8,7 +8,10 @@
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 
 <body>
 
@@ -25,12 +28,25 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     <div class="sidebar">
         <h2>🏢 Society Admin</h2>
 
-        <a href="#"><i class="fa fa-home"></i> Dashboard</a>
-        <a href="residents.html"><i class="fa fa-users"></i> Residents</a>
-        <a href="complaints.html"><i class="fa fa-exclamation-circle"></i> Complaints</a>
-        <a href="notice.html"><i class="fa fa-bullhorn"></i> Notices</a>
-        <a href="maintenance.html"><i class="fa fa-tools"></i> Maintenance</a>
-        <a href="#" onclick="logout()"><i class="fa fa-sign-out"></i> Logout</a>
+        <a href="dashboard.html"><i class="fa fa-home"></i> Dashboard</a>
+
+<a href="residents.html"><i class="fa fa-users"></i> Residents</a>
+
+<a href="maintenance.html"><i class="fa fa-tools"></i> Maintenance</a>
+
+<a href="payments.html"><i class="fa fa-money-bill"></i> Payments</a>
+
+<a href="complaints.html"><i class="fa fa-exclamation-circle"></i> Complaints</a>
+
+<a href="notice.html"><i class="fa fa-bullhorn"></i> Notices</a>
+
+<a href="documents.html"><i class="fa fa-file-pdf"></i> Documents</a>
+
+<a href="#"><i class="fa fa-chart-line"></i> Reports</a>
+
+<a href="#"><i class="fa fa-cog"></i> Settings</a>
+
+<a href="#" onclick="logout()"><i class="fa fa-sign-out"></i> Logout</a>
     </div>
 
     <!-- MAIN CONTENT -->
@@ -64,6 +80,18 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
                 <h3>Total Collection</h3>
                 <p id="collection">₹0</p>
             </div>
+            
+<div class="card">
+    <i class="fa fa-clock"></i>
+    <h3>Pending Payments</h3>
+    <p id="pendingCount">0</p>
+</div>
+
+<div class="card">
+    <i class="fa fa-chart-line"></i>
+    <h3>Monthly Collection</h3>
+    <p id="monthlyCollection">₹0</p>
+</div>
 
         </div>
 
@@ -72,12 +100,30 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
             <h2>Quick Summary</h2>
             <p>Welcome to Society Management Dashboard 🚀</p>
         </div>
+        <section class="chart-section">
 
+    <div class="chart-card">
+
+        <h2>Monthly Collection</h2>
+
+        <canvas id="collectionChart"></canvas>
+
+    </div>
+
+    <div class="chart-card">
+
+        <h2>Payment Status</h2>
+
+        <canvas id="paymentChart"></canvas>
+
+    </div>
+
+</section>
     </div>
 
 </div>
 
-<script src="dashboard.js"></script>
+<script src="js/dashboard.js"></script>
 
 </body>
 </html>

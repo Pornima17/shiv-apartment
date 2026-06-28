@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Payment History</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<i class="fa-solid fa-building"></i>
+Shiv Apartment
+</div>
+
+<nav>
+
+<a href="resident-dashboard.html">Dashboard</a>
+<a href="my-profile.html">My Profile</a>
+<a href="my-maintenance.html">My Maintenance</a>
+<a href="payment-history.html">Payment History</a>
+<a href="notice.html">Notice</a>
+<a href="complaints.html">Complaint</a>
+<a href="#" onclick="logout()">Logout</a>
+
+</nav>
+
+</header>
+
+<section class="page-title">
+
+<h1>Payment History</h1>
+<p>Your Payment Records</p>
+
+</section>
+
+<section class="payment-history-box">
+
+<h2>My Payments</h2>
+
+<table>
+
+<thead>
+<tr>
+<th>ID</th>
+<th>Month</th>
+<th>Amount</th>
+<th>Status</th>
+<th>Mode</th>
+</tr>
+</thead>
+
+<tbody id="paymentHistoryTable"></tbody>
+
+</table>
+
+</section>
+
+<script src="js/payment-history.js"></script>
+
+</body>
+</html>
