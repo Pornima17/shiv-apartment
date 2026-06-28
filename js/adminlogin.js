@@ -10,17 +10,16 @@ loginForm.addEventListener("submit", function(e){
 
     if(username === "admin" && password === "admin123"){
 
-        localStorage.setItem("adminLoggedIn","true");
+        localStorage.setItem("isLoggedIn","true");
 
         alert("Admin Login Successful");
 
-        window.location.href="dashboard.html";
+        window.location.href = "dashboard.html";
 
-    }else{
+    } else {
 
-        message.innerHTML="Invalid Username or Password";
-        message.style.color="red";
-
+        message.innerHTML = "Invalid Username or Password";
+        message.style.color = "red";
     }
 
 });
