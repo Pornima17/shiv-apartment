@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Notice Board</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<header>
+    <h1>📢 Notice Board</h1>
+</header>
+
+ <nav>
+        <a href="index.html">Home</a>
+        <a href="residents.html">Residents</a>
+        <a href="complaints.html">Complaints</a>
+        <a href="maintenance.html">Maintenance</a>
+        <a href="notice.html">Notice</a>
+        <a href="dashboard.html">Dashboard</a>
+    </nav>
+
+<div class="container">
+
+    <!-- Add Notice Form -->
+    <div class="card">
+        <h2>Add New Notice</h2>
+
+        <form id="noticeForm">
+            <input type="text" id="title" placeholder="Notice Title" required>
+            <textarea id="message" placeholder="Notice Message" required></textarea>
+            <input type="date" id="date" required>
+
+            <button type="submit">
+                <i class="fa fa-plus"></i> Add Notice
+            </button>
+        </form>
+    </div>
+
+    <!-- Notice List -->
+    <div class="card">
+        <h2>All Notices</h2>
+        <div id="noticeList"></div>
+    </div>
+
+</div>
+
+<script src="notice.js"></script>
+
+</body>
+</html>

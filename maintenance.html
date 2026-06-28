@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maintenance</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">🏢 Society System</div>
+
+    <nav>
+        <a href="index.html">Dashboard</a>
+        <a href="residents.html">Residents</a>
+        <a href="complaints.html">Complaints</a>
+        <a href="maintenance.html">Maintenance</a>
+    </nav>
+</header>
+
+<div class="page-title">
+    <h1>Maintenance Management</h1>
+</div>
+
+<section class="maintenance-container">
+
+    <h2>Monthly Maintenance Entry</h2>
+
+    <!-- FILTERS -->
+    <div class="filters">
+        <select id="filterStatus">
+            <option value="All">All Status</option>
+            <option value="Paid">Paid</option>
+            <option value="Unpaid">Unpaid</option>
+            <option value="Overdue">Overdue</option>
+        </select>
+
+        <input type="text" id="searchBox" placeholder="Search Flat / Owner">
+    </div>
+
+    <!-- FORM -->
+    <form id="maintenanceForm">
+
+        <input type="text" id="flatNo" placeholder="Flat No (A-101)" required>
+
+        <input type="text" id="owner" placeholder="Owner Name" required>
+
+        <input type="number" id="amount" placeholder="Amount (₹)" required>
+
+        <input type="date" id="dueDate" required>
+
+        <input type="date" id="paidDate">
+
+        <select id="status">
+            <option value="Paid">Paid</option>
+            <option value="Unpaid">Unpaid</option>
+            <option value="Overdue">Overdue</option>
+        </select>
+
+        <select id="mode">
+            <option value="UPI">UPI</option>
+            <option value="Cash">Cash</option>
+            <option value="Bank">Bank</option>
+        </select>
+
+        <button type="submit"><i class="fa fa-plus"></i> Add</button>
+
+    </form>
+
+    <!-- TABLE -->
+    <table>
+
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Flat</th>
+                <th>Owner</th>
+                <th>Amount</th>
+                <th>Due</th>
+                <th>Paid</th>
+                <th>Status</th>
+                <th>Mode</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody id="maintenanceTable"></tbody>
+
+    </table>
+
+</section>
+
+<footer>
+    © 2026 Society Management System
+</footer>
+
+<script src="js/maintenance.js"></script>
+
+</body>
+</html>

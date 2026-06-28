@@ -20,7 +20,11 @@ flat: document.getElementById("flat").value,
 
 mobile: document.getElementById("mobile").value,
 
-email: document.getElementById("email").value
+email: document.getElementById("email").value,
+
+username: document.getElementById("username").value,
+
+password: document.getElementById("password").value
 
 };
 

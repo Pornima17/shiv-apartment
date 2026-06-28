@@ -842,4 +842,500 @@ table button{
     border-radius:5px;
 }
 
+/* ===========================
+   Maintenance Page
+=========================== */
+
+.maintenance-container{
+    width:80%;
+    margin:40px auto;
+    background:#fff;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.maintenance-container h2{
+    color:#0f4c81;
+    margin-bottom:20px;
+}
+
+/* Form */
+#maintenanceForm{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+    margin-bottom:25px;
+}
+
+#maintenanceForm input,
+#maintenanceForm select{
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:6px;
+    font-size:16px;
+    outline:none;
+    transition:0.3s;
+}
+
+#maintenanceForm input:focus,
+#maintenanceForm select:focus{
+    border-color:#0f4c81;
+    box-shadow:0 0 5px rgba(15,76,129,.3);
+}
+
+#maintenanceForm button{
+    grid-column:span 3;
+    padding:12px;
+    background:#0f4c81;
+    color:white;
+    border:none;
+    border-radius:6px;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+#maintenanceForm button:hover{
+    background:#08365b;
+}
+
+/* Table Status Styling */
+.status-paid{
+    background:#81c784;
+    color:white;
+    padding:6px 10px;
+    border-radius:6px;
+    font-weight:bold;
+}
+
+.status-unpaid{
+    background:#e57373;
+    color:white;
+    padding:6px 10px;
+    border-radius:6px;
+    font-weight:bold;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+    .maintenance-container{
+        width:95%;
+        padding:20px;
+    }
+
+    #maintenanceForm{
+        grid-template-columns:1fr;
+    }
+
+    #maintenanceForm button{
+        grid-column:span 1;
+    }
+}
+
+/* Filters */
+.filters{
+    display:flex;
+    gap:15px;
+    margin-bottom:20px;
+}
+
+.filters select,
+.filters input{
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:6px;
+    width:200px;
+}
+
+/* Status badges */
+.paid{
+    background:#81c784;
+    color:white;
+    padding:6px 10px;
+    border-radius:6px;
+    font-weight:bold;
+}
+
+.unpaid{
+    background:#e57373;
+    color:white;
+    padding:6px 10px;
+    border-radius:6px;
+    font-weight:bold;
+}
+
+.overdue{
+    background:#ffb74d;
+    color:black;
+    padding:6px 10px;
+    border-radius:6px;
+    font-weight:bold;
+}
+
+/* Button spacing */
+.delete-btn{
+    background:#dc3545;
+    color:white;
+    padding:6px 10px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+/* Due Date */
+.due-date{
+    background:#ffe082;
+    padding:6px 10px;
+    border-radius:6px;
+    font-weight:bold;
+    color:#000;
+}
+
+/* Paid Date */
+.paid-date{
+    background:#c8e6c9;
+    padding:6px 10px;
+    border-radius:6px;
+    font-weight:bold;
+    color:#1b5e20;
+}
+
+.pending-date{
+    background:#ffcdd2;
+    padding:6px 10px;
+    border-radius:6px;
+    font-weight:bold;
+    color:#b71c1c;
+}
+
+.container{
+    max-width:900px;
+    margin:30px auto;
+    padding:20px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    margin-bottom:20px;
+    border-radius:12px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+form input, form textarea{
+    width:100%;
+    margin:10px 0;
+    padding:12px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    outline:none;
+}
+
+form textarea{
+    height:100px;
+    resize:none;
+}
+
+button{
+    background:#1e293b;
+    color:white;
+    padding:10px 15px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#0f172a;
+}
+
+.notice{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px;
+    border-bottom:1px solid #eee;
+}
+
+.notice h3{
+    margin:0;
+    color:#1e293b;
+}
+
+.notice p{
+    margin:5px 0;
+    color:#555;
+}
+
+.notice small{
+    color:#888;
+}
+
+.login-body{
+    background: linear-gradient(135deg, #1e293b, #334155);
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.login-box{
+    background:white;
+    padding:30px;
+    width:320px;
+    border-radius:12px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+    text-align:center;
+}
+
+.login-box h2{
+    margin-bottom:20px;
+    color:#1e293b;
+}
+
+.input-box{
+    display:flex;
+    align-items:center;
+    margin:10px 0;
+    border:1px solid #ddd;
+    padding:10px;
+    border-radius:8px;
+}
+
+.input-box i{
+    margin-right:10px;
+    color:#1e293b;
+}
+
+.input-box input{
+    border:none;
+    outline:none;
+    width:100%;
+}
+
+button{
+    width:100%;
+    padding:10px;
+    background:#1e293b;
+    color:white;
+    border:none;
+    border-radius:8px;
+    margin-top:10px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#0f172a;
+}
+
+#msg{
+    margin-top:10px;
+    font-size:14px;
+}
+
+
+/* DASHBOARD LAYOUT */
+.dashboard{
+    display:flex;
+    min-height:100vh;
+    background:#f4f7fc;
+}
+
+/* SIDEBAR */
+.sidebar{
+    width:220px;
+    background:#1e293b;
+    color:white;
+    padding:20px;
+}
+
+.sidebar h2{
+    margin-bottom:20px;
+    font-size:18px;
+}
+
+.sidebar a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    padding:10px;
+    margin:5px 0;
+    border-radius:6px;
+}
+
+.sidebar a:hover{
+    background:#334155;
+}
+
+/* MAIN */
+.main{
+    flex:1;
+    padding:20px;
+}
+
+.main h1{
+    margin-bottom:20px;
+}
+
+/* CARDS */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.08);
+    text-align:center;
+}
+
+.card i{
+    font-size:25px;
+    color:#1e293b;
+    margin-bottom:10px;
+}
+
+.card h3{
+    margin:10px 0;
+}
+
+.card p{
+    font-size:20px;
+    font-weight:bold;
+}
+
+/* TABLE BOX */
+.table-box{
+    margin-top:20px;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+}
+
+/* ==============================
+   Resident Login
+============================== */
+
+.login-form{
+    width:400px;
+    margin:60px auto;
+    background:#fff;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.login-form h2{
+    text-align:center;
+    margin-bottom:25px;
+    color:#1e293b;
+}
+
+.login-form input{
+    width:100%;
+    padding:12px;
+    margin-bottom:18px;
+    border:1px solid #ccc;
+    border-radius:6px;
+    font-size:16px;
+}
+
+.login-form button{
+    width:100%;
+    padding:12px;
+    background:#2563eb;
+    color:white;
+    border:none;
+    border-radius:6px;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.login-form button:hover{
+    background:#1d4ed8;
+}
+
+#message{
+    text-align:center;
+    margin-top:15px;
+    font-weight:bold;
+}
+
+/* ==============================
+   Resident Dashboard
+============================== */
+
+.resident-profile{
+
+    width:80%;
+    max-width:700px;
+
+    margin:40px auto;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:10px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+
+}
+
+.resident-profile h2{
+
+    text-align:center;
+
+    margin-bottom:25px;
+
+    color:#1e293b;
+
+}
+
+.resident-profile p{
+
+    font-size:18px;
+
+    margin:18px 0;
+
+    padding:12px;
+
+    background:#f4f7fc;
+
+    border-left:5px solid #2563eb;
+
+    border-radius:6px;
+
+}
+
+@media(max-width:768px){
+
+.login-form{
+
+width:90%;
+
+}
+
+.resident-profile{
+
+width:90%;
+
+padding:20px;
+
+}
+
+.resident-profile p{
+
+font-size:16px;
+
+}
+
+}
 
